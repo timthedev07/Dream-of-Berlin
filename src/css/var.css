@@ -1,0 +1,53 @@
+:root {
+  --paragraph-size: 19px;
+  --content-bg-color: rgba(56, 71, 79);
+  --content-color: white;
+  --min-width: 320px;
+}
+
+/* custom fonts */
+@font-face {
+  font-family: "Rubik Bold Italic";
+  src: url("../fonts/Rubik/static/Rubik-BoldItalic.ttf"); /* IE9 Compat Modes */
+  src: /* Modern Browsers */ url("../fonts/Rubik/static/Rubik-BoldItalic.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Rubik Light";
+  src: url("../fonts/Rubik/static/Rubik-Light.ttf"); /* IE9 Compat Modes */
+  src: /* Modern Browsers */ url("../fonts/Rubik/static/Rubik-Light.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Rubik SemiBold";
+  src: url("../fonts/Rubik/static/Rubik-SemiBold.ttf"); /* IE9 Compat Modes */
+  src: /* Modern Browsers */ url("../fonts/Rubik/static/Rubik-SemiBold.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Rubik Regular";
+  src: url("../fonts/Rubik/static/Rubik-Regular.ttf"); /* IE9 Compat Modes */
+  src: /* Modern Browsers */ url("../fonts/Rubik/static/Rubik-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Regular";
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf"); /* IE9 Compat Modes */
+  src: /* Modern Browsers */ url("../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Semibold Italic";
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-SemiBoldItalic.ttf"); /* IE9 Compat Modes */
+  src: /* Modern Browsers */ url("../fonts/Playfair_Display/static/PlayfairDisplay-SemiBoldItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Italic";
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-SemiBoldItalic.ttf"); /* IE9 Compat Modes */
+  src: /* Modern Browsers */ url("../fonts/Playfair_Display/static/PlayfairDisplay-SemiBoldItalic.ttf")
+    format("truetype");
+}

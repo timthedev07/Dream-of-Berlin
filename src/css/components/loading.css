@@ -1,0 +1,11 @@
+div.loading {
+    background-color: rgba(231, 235, 221, 0.322);
+    height: 100vh;
+    width: 100vw;
+    z-index: 9000;
+    position: fixed;
+}
+
+div.loading-active ~ body {
+    overflow: hidden;
+}

@@ -1,0 +1,21 @@
+@import url(./general.css);
+/* css for each component */
+@import url(./components/navigation/nav.css);
+@import url(./components/navigation/sidebar.css);
+@import url(./components/menuBtn.css);
+@import url(./components/loading.css);
+@import url(./components/alert.css);
+@import url(./components/footer.css);
+@import url(./components/animatedButton.css);
+@import url(./components/macosWindow.css);
+
+/* css for each page */
+@import url(./pages/404.css);
+@import url(./pages/about.css);
+@import url(./pages/contact.css);
+@import url(./pages/home.css);
+@import url(./pages/policies.css);
+@import url(./pages/faq.css);
+
+/* custom properties */
+@import url(./var.css);

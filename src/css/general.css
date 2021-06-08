@@ -1,0 +1,26 @@
+body {
+  background-color: var(--content-bg-color);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--content-color);
+  font-family: "Rubik Regular";
+  margin: 0 0;
+}
+
+.page-content {
+  z-index: 50;
+  padding: 0px;
+}
+
+.number-mark {
+  background: none;
+  font-size: calc(var(--paragraph-size) + 2px);
+  color: rgb(255, 217, 0);
+}
+
+@media screen and (max-width: 260px) {
+  .page-content {
+    z-index: 50;
+    padding: 0px;
+  }
+}

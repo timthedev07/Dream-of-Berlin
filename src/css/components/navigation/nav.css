@@ -1,0 +1,94 @@
+/* styles for the navigation bar container */
+.nav-bar {
+  background-color: rgb(37, 37, 37);
+  height: 60px !important;
+  padding-top: 10px;
+  padding-left: 20px;
+  z-index: 6000;
+  min-width: var(--min-width);
+  font-family: "Rubik Light";
+}
+
+/* styles for the nav bar that's displayed on the home page */
+.nav-bar.nav-bar-transparent {
+  background-color: rgba(255, 255, 255, 0.048); /*rgb(37, 37, 37)*/
+  min-height: max-content;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+/* styles for the normal items in nav bar */
+.nav-bar .nav-item,
+.nav-bar .nav-item:hover {
+  color: white;
+  float: right;
+  padding: 10px 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-decoration: none;
+  transition: 0.4s;
+  height: 50px;
+}
+/* Adjust the spacing on screens of different sizes */
+@media screen and (min-width: 1250px) {
+  .nav-bar .nav-item,
+  .nav-bar .nav-item:hover {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (max-width: 1249px) {
+  .nav-bar .nav-item,
+  .nav-bar .nav-item:hover {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .nav-bar .nav-item,
+  .nav-bar .nav-item:hover {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.nav-logo {
+  width: 50px;
+}
+
+a.nav-item-active {
+  background-color: rgba(143, 199, 79, 0.897);
+  background-size: 100% 80%;
+  text-decoration: none;
+  display: block;
+  text-decoration: none;
+  content: "";
+  text-transform: uppercase;
+  border-bottom: solid 6px #d4d800;
+  transition: transform 250ms ease-in-out;
+}
+
+/*------------------Hover animation--------------------------*/
+.nav-item:not(.nav-item-active):after {
+  text-decoration: none;
+  display: block;
+  text-decoration: none;
+  content: "";
+  border-bottom: solid 3px #019fb6;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.nav-item:not(.nav-item-active):hover:after {
+  transform: scaleX(1);
+}
+/*------------------Hover animation--------------------------*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky ~ .page-content {
+  padding-top: 60px;
+}
