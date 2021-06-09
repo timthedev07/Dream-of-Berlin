@@ -1,0 +1,13 @@
+.page-header#sports-page-header {
+  background-image: url(../../images/sport2.jpg);
+}
+
+@media screen and (max-width: 800px) {
+  .page-header#sports-page-header {
+    background-image: url(../../images/sportmobile.jpg);
+  }
+  .page-header#sports-page-header .page-heading {
+    top: 100px;
+    left: 2%;
+  }
+}

@@ -9,9 +9,10 @@ import PrivacyPolicies from "./pages/PrivacyPolicies";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Footer from "./components/Footer";
 import Sports from "./pages/Sports";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export const API_BASE_URL =
-  "https://blue-ocean-international-test.herokuapp.com/api/v0/";
+AOS.init();
 
 export default function App() {
   return (

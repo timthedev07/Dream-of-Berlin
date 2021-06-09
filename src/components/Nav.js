@@ -76,7 +76,7 @@ export default function Nav(props) {
     >
       <a
         className={
-          currPath === "contact-us" ? "nav-item nav-item-active" : "nav-item"
+          currPath === "celebrities" ? "nav-item nav-item-active" : "nav-item"
         }
         href="/celebrities"
       >
@@ -84,7 +84,7 @@ export default function Nav(props) {
       </a>
       <a
         className={
-          currPath === "products" ? "nav-item nav-item-active" : "nav-item"
+          currPath === "travel-guide" ? "nav-item nav-item-active" : "nav-item"
         }
         href="/travel-guide"
       >
