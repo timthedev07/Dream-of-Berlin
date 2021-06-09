@@ -9,6 +9,7 @@ body {
 
 .page-content {
   z-index: 50;
+  display: block;
   padding: 0px;
 }
 

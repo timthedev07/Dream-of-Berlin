@@ -59,6 +59,7 @@
   border-radius: 20px;
   resize: none;
   object-fit: cover;
+  box-shadow: 4px 4px 15px 0px rgb(32, 32, 32);
 }
 
 .info-heading {

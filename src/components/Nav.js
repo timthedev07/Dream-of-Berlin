@@ -24,16 +24,18 @@ export default function Nav(props) {
   // holding whether or not the sidebar(on smaller screens) is opened
   const [sideBarOpen, setSideBarOpen] = useState(() => false);
 
+  // holding the scroll progress
+  const [scrollY, setScrollY] = useState(() => window.scrollY);
+
   // adds a sticky class to nav bar according to the window scroll
   function classManipulator() {
     if (!navBarRef.current) return;
 
     var sticky = navBarRef.current.offsetTop;
-
+    setScrollY(window.pageYOffset);
     if (window.pageYOffset >= sticky) {
       navBarRef.current.classList.add("sticky");
     } else {
-      console.log("NO");
       navBarRef.current.classList.remove("sticky");
     }
   }
@@ -88,6 +90,14 @@ export default function Nav(props) {
       >
         Travel Guide
       </a>
+      <a
+        className={
+          currPath === "sports" ? "nav-item nav-item-active" : "nav-item"
+        }
+        href="/sports"
+      >
+        Sports
+      </a>
       <a style={{ float: "left" }} className="nav-item" href="/">
         Home
       </a>
@@ -97,7 +107,7 @@ export default function Nav(props) {
   // define the sidebar for smaller devices
   const sidebar = (
     <>
-      <div className="menu-btn-container">
+      <div className={`menu-btn-container ${scrollY <= 0 ? "sticky" : ""}`}>
         <MenuButton open={sideBarOpen} onClick={toggleSideBar} />
       </div>
       <div
@@ -116,6 +126,12 @@ export default function Nav(props) {
           onClick={() => (window.location = "/travel-guide")}
         >
           Travel Guide
+        </div>
+        <div
+          className="side-bar-item"
+          onClick={() => (window.location = "/sports")}
+        >
+          Sports
         </div>
         <div
           className="side-bar-item"

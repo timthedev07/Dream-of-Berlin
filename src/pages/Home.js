@@ -29,7 +29,7 @@ export default function Home() {
       <div id="home-page" className="page-content">
         <div className="content-wrapper">
           <div className="info-block">
-            <h1 className="info-heading">Informationen und Wissenswertes</h1>
+            <h1 className="info-heading">Informationen und Fakten</h1>
             <div className="info-inner-container">
               <Image float="right" image={Berlin0} />
               <p className="info-paragraph">
@@ -49,7 +49,7 @@ export default function Home() {
             </div>
           </div>
           <div className="info-block">
-            <h1 className="info-heading">Informationen und Wissenswertes</h1>
+            <h1 className="info-heading">Die Geschichte Kurze</h1>
             <div className="info-inner-container-reversed">
               <Image float="left" image={Battle} />
               <p className="info-paragraph">
