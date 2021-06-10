@@ -11,11 +11,10 @@
 
 /* css for each page */
 @import url(./pages/404.css);
-@import url(./pages/about.css);
-@import url(./pages/contact.css);
 @import url(./pages/home.css);
 @import url(./pages/policies.css);
-@import url(./pages/faq.css);
+@import url(./pages/sports.css);
+@import url(./pages/travel.css);
 
 /* custom properties */
 @import url(./var.css);

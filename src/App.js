@@ -8,9 +8,11 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicies from "./pages/PrivacyPolicies";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Footer from "./components/Footer";
+import Sports from "./pages/Sports";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export const API_BASE_URL =
-  "https://blue-ocean-international-test.herokuapp.com/api/v0/";
+AOS.init();
 
 export default function App() {
   return (
@@ -18,22 +20,29 @@ export default function App() {
       <Router>
         <RouteControl>
           <Switch>
+            {/* Information pages */}
             <Route exact path="/">
               <Home />
             </Route>
-
             <Route exact path="/celebrities">
               <Celebrities />
             </Route>
             <Route exact path="/travel-guide">
               <Travel />
             </Route>
+            <Route exact path="/sports">
+              <Sports />
+            </Route>
+
+            {/* Policies */}
             <Route exact path="/terms-and-conditions">
               <TermsAndConditions />
             </Route>
             <Route exact path="/privacy-policies">
               <PrivacyPolicies />
             </Route>
+
+            {/* 404 */}
             <Route>
               <NotFound />
             </Route>

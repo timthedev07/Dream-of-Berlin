@@ -21,10 +21,10 @@
 }
 
 @media screen and (max-width: 800px) {
-  .page-header {
+  .page-header#home-page-header {
     background-position: 100% 20%;
   }
-  .page-header .page-heading {
+  .page-header#home-page-header .page-heading {
     top: 100px;
     left: 2%;
   }
@@ -37,9 +37,14 @@
   padding-bottom: 15px;
   min-width: var(--min-width);
 }
-#home-page .content-wrapper {
+
+.small-stuff {
+  -webkit-text-size-adjust: none;
+  font-size: 3px !important;
+}
+
+.page-content .content-wrapper {
   border: none;
-  margin: 10px;
   min-height: 200px;
   display: block;
   overflow: hidden;
@@ -47,6 +52,7 @@
   box-shadow: 0 0 10px 0 gray;
   border-radius: 4px;
   padding: 20px;
+  margin: auto;
   background-color: rgba(205, 211, 212, 0.205);
 }
 
@@ -59,6 +65,7 @@
   border-radius: 20px;
   resize: none;
   object-fit: cover;
+  box-shadow: 4px 4px 15px 0px rgb(32, 32, 32);
 }
 
 .info-heading {
@@ -73,6 +80,9 @@
   font-family: "Playfair Regular";
   font-size: var(--paragraph-size);
   margin: 10px;
+}
+.info-paragraph.full-width {
+  width: 95%;
 }
 
 .info-block {

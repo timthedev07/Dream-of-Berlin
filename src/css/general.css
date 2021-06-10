@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--content-bg-color);
   background-repeat: no-repeat;
@@ -9,7 +13,9 @@ body {
 
 .page-content {
   z-index: 50;
-  padding: 0px;
+  display: block;
+  padding: 3px;
+  min-width: var(--min-width);
 }
 
 .number-mark {

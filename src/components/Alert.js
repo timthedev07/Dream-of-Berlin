@@ -1,8 +1,8 @@
 import React from "react";
 import { ReactComponent as CloseIcon } from "../icons/close.svg";
 
-export default function Alert(props) {
-    function handleClick() {
+export default Alert = (props) => {
+    const handleClick = () => {
         props.setActive(false);
     }
 

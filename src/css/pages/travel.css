@@ -1,0 +1,38 @@
+.page-header#travel-page-header {
+  background-image: url(../../images/berlin1.jpg);
+  background-position: center center;
+}
+
+.page-header#travel-page-header .page-heading {
+  top: 160px;
+  width: 80%;
+}
+
+@media screen and (max-width: 800px) {
+  .page-header#travel-page-header {
+    background-position: center center;
+    background-image: url(../../images/berlin2.jpg);
+  }
+  .page-header#travel-page-header .page-heading {
+    top: 180px;
+    width: 80%;
+  }
+}
+
+#restaurant-map {
+  width: 80vw;
+  height: 400px;
+  margin: auto;
+  border-radius: 15px !important;
+  box-shadow: 5px 5px 10px rgb(43, 43, 43);
+}
+@media screen and (max-width: 400px) {
+  #restaurant-map {
+    height: 600px;
+    box-shadow: 0px 0px 2px rgb(43, 43, 43);
+  }
+}
+
+#restaurant-map .react-bingmaps .MicrosoftMap div {
+  border-radius: 15px !important;
+}

@@ -14,6 +14,14 @@ function FooterMobileLink(props) {
   );
 }
 
+const FooterColumnLink = ({ text, location }) => {
+  return (
+    <a className="footer-column-link" href={location}>
+      {text}
+    </a>
+  );
+};
+
 export default function Footer() {
   // setting up a state holding the current screen width
   const [windowWidth, setWindowWidth] = useState(() => window.innerWidth);
@@ -42,6 +50,7 @@ export default function Footer() {
       </div>
       <FooterMobileLink text="Home" location="/" />
       <FooterMobileLink text="Travel Guide" location="/travel-guide" />
+      <FooterMobileLink text="Sports" location="/sports" />
       <FooterMobileLink text="Celebrities" location="/celebrities" />
 
       <div className="footer-sub__copyright mobile">
@@ -59,7 +68,7 @@ export default function Footer() {
             alt="Logo"
           />
           <h5 className="footer-column-title">Our Goal</h5>
-          <p style={{ fontSize: "11px" }}>Learn German</p>
+          <p style={{ fontSize: "16px" }}>Learn German</p>
         </div>
         <div className="footer-main__column">
           <h5 className="footer-column-title">Support</h5>
@@ -73,12 +82,9 @@ export default function Footer() {
         </div>
         <div className="footer-main__column">
           <h5 className="footer-column-title">Read about Berlin</h5>
-          <a className="footer-column-link" href="/travel-guide">
-            Travel Guide
-          </a>
-          <a className="footer-column-link" href="/celebrities">
-            Celebrities
-          </a>
+          <FooterColumnLink text="Travel Guide" location="/travel-guide" />
+          <FooterColumnLink text="Sports" location="/sports" />
+          <FooterColumnLink text="Celebrities" location="/celebrities" />
         </div>
       </div>
       <div className="footer-sub">
