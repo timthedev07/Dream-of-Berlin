@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "../components/Nav";
 import { ReactBingmaps } from "react-bingmaps";
 import {
@@ -6,20 +6,10 @@ import {
   SCROLL_ANIMATION_DURATION,
   AnimatedList,
 } from "./Home";
+import ReactGLMap, { Marker, Popup } from "react-map-gl";
+import { ReactComponent as MarkerIcon } from "../icons/marker.svg";
 
-const BMap = ({ points }) => {
-  return (
-    <>
-      <ReactBingmaps
-        bingmapKey={process.env.REACT_APP_MAPS_API}
-        zoom={11}
-        disableScrollWheelZoom={true}
-        center={[52.52138088473879, 13.406859916716096]}
-        infoboxesWithPushPins={pushPins}
-      ></ReactBingmaps>
-    </>
-  );
-};
+const DEV_MODE = true;
 
 const RestaurantMap = () => {
   return (
@@ -29,7 +19,94 @@ const RestaurantMap = () => {
       data-aos-once="true"
       id="restaurant-map"
     >
-      <BMap />
+      {!DEV_MODE ? (
+        <ReactBingmaps
+          bingmapKey={process.env.REACT_APP_BING_MAPS_API}
+          zoom={11}
+          disableScrollWheelZoom={true}
+          center={[52.52138088473879, 13.406859916716096]}
+          infoboxesWithPushPins={pushPins}
+        ></ReactBingmaps>
+      ) : (
+        <h1>MAP NOT SHOWN FOR DEVELOPMENT PURPOSES</h1>
+      )}
+    </div>
+  );
+};
+
+const AttractionsMap = ({ halfWidth }) => {
+  const [mapState, setMapState] = useState({
+    // latitude: 52.5160511621844,
+    // longitude: 13.400762036365524,
+    latitude: 52.51864367760826,
+    longitude: 13.376899031775872,
+    zoom: 13,
+    width: "100%",
+    height: "100%",
+  });
+
+  const [selectedSpot, setSelectedSpot] = useState(null);
+
+  useEffect(() => {
+    const listener = (e) => {
+      if (e.key === "Escape") {
+        setSelectedSpot(null);
+      }
+    };
+    window.addEventListener("keyup", listener);
+
+    return () => {
+      window.removeEventListener("keyup", listener);
+    };
+  }, []);
+
+  return (
+    <div className="attractions-map-container">
+      <ReactGLMap
+        {...mapState}
+        className="attractions-map info-paragraph"
+        mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX_API}
+        onViewportChange={(newState) => {
+          setMapState(newState);
+        }}
+        mapStyle="mapbox://styles/im-just-a-dev/ckpr6pit02jhi18qhjckjcdzg"
+      >
+        {attractions.map((each) => {
+          return (
+            <Marker
+              key={`${each.name}`}
+              latitude={each.latitude}
+              longitude={each.longitude}
+            >
+              <MarkerIcon
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSelectedSpot({
+                    name: each.name,
+                    latitude: each.latitude,
+                    longitude: each.longitude,
+                  });
+                }}
+                className="mapbox-marker-inner"
+              />
+            </Marker>
+          );
+        })}
+        {selectedSpot ? (
+          <Popup
+            latitude={selectedSpot.latitude}
+            longitude={selectedSpot.longitude}
+            onClose={() => {
+              setSelectedSpot(null);
+            }}
+          >
+            <div style={{ marginRight: "40px" }}>
+              <h4 className="black-text">{selectedSpot.name}</h4>
+              <p className="black-text">Schöner Ort zu besuchen</p>
+            </div>
+          </Popup>
+        ) : null}
+      </ReactGLMap>
     </div>
   );
 };
@@ -43,14 +120,26 @@ export default function Travel() {
       </div>
       <div id="travel-page" className="page-content">
         <div className="content-wrapper">
-          <div className="content-section food-content">
+          <div className="info-block">
+            <h1 className="info-heading">Sehenswürdigkeiten</h1>
+            <div className="info-inner-container">
+              <AttractionsMap />
+              <AnimatedParagraph position="right">TO-DO</AnimatedParagraph>
+            </div>
+          </div>
+          <section className="content-section food-content">
             <h1 className="info-heading">Essen und Restaurants</h1>
             <AnimatedParagraph fullWidth={true} position="left">
               Berlin ist eine schöne Stadt mit allen Art von leckeren Speisen in
-              unterschiedlichen Restaurants. Heir sind
+              unterschiedlichen Restaurants.
+              <b>
+                <br />
+                Heir sind enige der traditionellen Gerichte einen Versuch wert
+                sind.
+              </b>
             </AnimatedParagraph>
 
-            <AnimatedList>
+            <AnimatedList position="left" fullWidth={true}>
               <li>
                 Schnitzel: ein Stück Fleisch, mit Mehl, Ei und Semmelbrösel
                 bedeckt und dann in Öl frittiert
@@ -65,13 +154,29 @@ export default function Travel() {
                 alles überzogen mit einer cremigen Senfsauce.
               </li>
             </AnimatedList>
+            <AnimatedParagraph fullWidth={true}>
+              Wir auflisten einige die beste Restaurants auf Berlin:
+            </AnimatedParagraph>
             <RestaurantMap />
-          </div>
+          </section>
         </div>
       </div>
     </>
   );
 }
+
+const attractions = [
+  {
+    latitude: 52.51864367760826,
+    longitude: 13.376899031775872,
+    name: "Reichstagsgebäude",
+  },
+  {
+    latitude: 52.516303958397565,
+    longitude: 13.377494221977875,
+    name: "Brandenburger Tor",
+  },
+];
 
 const pushPins = [
   {
