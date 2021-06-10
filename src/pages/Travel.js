@@ -7,29 +7,6 @@ import {
   AnimatedList,
 } from "./Home";
 
-// const restaurants = [
-//   [
-//     { lat: 52.52555223870703, lng: 13.407951269950583 },
-//     "Shiori - Japanese Restaurant",
-//   ],
-//   [
-//     { lat: 52.48765872521328, lng: 13.390821460756163 },
-//     "Peter Schlemihl - German Cuisine",
-//   ],
-//   [
-//     { lat: 52.53650356848609, lng: 13.379540398911166 },
-//     "Hackethal's - German Cuisine",
-//   ],
-//   [
-//     { lat: 52.54053326762361, lng: 13.412582341406043 },
-//     "Rüyam Gemüse Kebab 2 - Kebab",
-//   ],
-//   [
-//     { lat: 52.49818993717965, lng: 13.430829275480743 },
-//     "Best Friends Kreuzberg - Japanese & Fusion Cuisine",
-//   ],
-// ];
-
 const BMap = ({ points }) => {
   return (
     <>
@@ -69,9 +46,10 @@ export default function Travel() {
           <div className="content-section food-content">
             <h1 className="info-heading">Essen und Restaurants</h1>
             <AnimatedParagraph fullWidth={true} position="left">
-              Berlin ist eine Stadt schöne, es hat auch Essen von
-              unterschiedlich Stile lecker du kannst an Restaurants essen.
+              Berlin ist eine schöne Stadt mit allen Art von leckeren Speisen in
+              unterschiedlichen Restaurants. Heir sind
             </AnimatedParagraph>
+
             <AnimatedList>
               <li>
                 Schnitzel: ein Stück Fleisch, mit Mehl, Ei und Semmelbrösel
