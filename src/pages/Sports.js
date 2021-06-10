@@ -6,7 +6,7 @@ export default function Sports() {
     <>
       <div className="page-header" id="sports-page-header">
         <Nav transparent={false} />
-        <h1 className="page-heading">Sports</h1>
+        <h1 className="page-heading">Sporte</h1>
       </div>
       <div id="sports-page" className="page-content">
         <div className="content-wrapper"></div>

@@ -5,6 +5,7 @@
   min-height: 340px;
   height: max-content;
   box-shadow: 0 5px 5px -5px black;
+  min-width: var(--min-width);
 }
 
 .footer .footer-main {

@@ -37,9 +37,14 @@
   padding-bottom: 15px;
   min-width: var(--min-width);
 }
-#home-page .content-wrapper {
+
+.small-stuff {
+  -webkit-text-size-adjust: none;
+  font-size: 3px !important;
+}
+
+.page-content .content-wrapper {
   border: none;
-  margin: 10px;
   min-height: 200px;
   display: block;
   overflow: hidden;
@@ -47,6 +52,7 @@
   box-shadow: 0 0 10px 0 gray;
   border-radius: 4px;
   padding: 20px;
+  margin: auto;
   background-color: rgba(205, 211, 212, 0.205);
 }
 
@@ -74,6 +80,9 @@
   font-family: "Playfair Regular";
   font-size: var(--paragraph-size);
   margin: 10px;
+}
+.info-paragraph.full-width {
+  width: 95%;
 }
 
 .info-block {

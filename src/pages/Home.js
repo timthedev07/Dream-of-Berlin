@@ -6,12 +6,25 @@ import Battle from "../images/battle0.jpg";
 import Communication from "../images/communication.jpg";
 import Parties from "../images/parties.jpg";
 
-const SCROLL_ANIMATION_DURATION = "700";
+export const SCROLL_ANIMATION_DURATION = "700";
 
-const AnimatedParagraph = ({ children, position }) => {
+export const AnimatedList = ({ children, position, fullWidth }) => {
+  return (
+    <ul
+      className={fullWidth ? "info-paragraph full-width" : "info-paragraph"}
+      data-aos={position === "right" ? "fade-left" : "fade-right"}
+      data-aos-once="true"
+      data-aos-duration={SCROLL_ANIMATION_DURATION}
+    >
+      {children}
+    </ul>
+  );
+};
+
+export const AnimatedParagraph = ({ children, position, fullWidth }) => {
   return (
     <p
-      className="info-paragraph"
+      className={fullWidth ? "info-paragraph full-width" : "info-paragraph"}
       data-aos={position === "right" ? "fade-left" : "fade-right"}
       data-aos-once="true"
       data-aos-duration={SCROLL_ANIMATION_DURATION}

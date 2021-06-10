@@ -14,7 +14,8 @@ body {
 .page-content {
   z-index: 50;
   display: block;
-  padding: 0px;
+  padding: 3px;
+  min-width: var(--min-width);
 }
 
 .number-mark {
