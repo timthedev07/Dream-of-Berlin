@@ -18,6 +18,15 @@ body {
   min-width: var(--min-width);
 }
 
+.link-text {
+  color: rgb(255, 217, 0);
+}
+
+.link-text:hover {
+  color: rgb(255, 218, 8);
+  text-decoration: underline;
+}
+
 .number-mark {
   background: none;
   font-size: calc(var(--paragraph-size) + 2px);

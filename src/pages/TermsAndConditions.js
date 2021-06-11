@@ -16,7 +16,7 @@ export default function TermsAndConditions() {
           <p>
             These terms and conditions outline the rules and regulations for the
             use of Dream of Berlin's Website, located at
-            dreamofberlin.netlify.app.
+            dream-of-berlin.netlify.app.
           </p>
 
           <p>
