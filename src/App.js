@@ -1,5 +1,10 @@
 import RouteControl from "./contexts/RouteControl";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 import "./css/master.css";
 import Home from "./pages/Home";
 import Travel from "./pages/Travel";
@@ -23,6 +28,9 @@ export default function App() {
             {/* Information pages */}
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/home">
+              <Redirect to="/" />
             </Route>
             <Route exact path="/travel-guide">
               <Travel />

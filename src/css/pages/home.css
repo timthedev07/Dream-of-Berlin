@@ -73,6 +73,9 @@
   margin-bottom: 15px;
   word-break: break-all;
 }
+.info-heading.heading-center {
+  text-align: center;
+}
 
 .info-paragraph {
   width: 45%;

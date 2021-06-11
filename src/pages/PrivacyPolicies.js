@@ -10,7 +10,7 @@ export default function PrivacyPolicies() {
           <h1>Privacy Policy for Dream of Berlin</h1>
 
           <p>
-            At Dream of Berlin, accessible from dreamofberlin.netlify.app, one
+            At Dream of Berlin, accessible from dream-of-berlin.netlify.app, one
             of our main priorities is the privacy of our visitors. This Privacy
             Policy document contains types of information that is collected and
             recorded by Dream of Berlin and how we use it.

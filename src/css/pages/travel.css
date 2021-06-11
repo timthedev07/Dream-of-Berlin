@@ -104,3 +104,15 @@
     margin-right: 10px;
   }
 }
+
+.horizontal-line {
+  width: 40px;
+  height: 3px;
+  background-color: gold;
+  box-shadow: 0 0 5px gray;
+  margin: auto;
+}
+
+.info-paragraph.large-width {
+  width: 70% !important;
+}

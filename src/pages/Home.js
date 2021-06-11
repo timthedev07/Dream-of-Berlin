@@ -35,10 +35,14 @@ export const AnimatedParagraph = ({
   position,
   fullWidth,
   animationName,
+  additionalClassName,
 }) => {
   return (
     <p
-      className={fullWidth ? "info-paragraph full-width" : "info-paragraph"}
+      className={
+        (fullWidth ? "info-paragraph full-width " : "info-paragraph ") +
+          additionalClassName || ""
+      }
       data-aos={
         animationName || position === "right" ? "fade-left" : "fade-right"
       }
@@ -92,7 +96,7 @@ export default function Home() {
       <div id="home-page" className="page-content">
         <div className="content-wrapper">
           <div className="info-block">
-            <h1 className="info-heading" style={{ textAlign: "center" }}>
+            <h1 className="info-heading heading-center">
               Information und Fakten
             </h1>
             <div className="info-inner-container lots-of-text reversed-text-first">
@@ -104,7 +108,7 @@ export default function Home() {
                 die Großte Stadt von Deutschland, während neunmal größer als
                 Paris ist, obwohl es nur <HighlightedNumber text="1 / 5" /> von
                 die population von paris hat. Es gibt viel Monumente im Berlin,
-                es gibt Museen historische, auch es gibt ikonische Gebäude. Die
+                es gibt Museen historische, es gibt auch ikonische Gebäude. Die
                 Stadt wird in <HighlightedNumber text="12" />
                 Bezirken geteilt, die Mitte, Friedrichshain-Kreuzberg, Pankow,
                 Charlottenburg-Wilmerdorf, Spandau, Steglitz-Zehlendorf,
@@ -150,11 +154,11 @@ export default function Home() {
                 eine Pianistin geboren 1984, Götz George ist ein Akteur geboren
                 1938, und Carsten Keller ist ein ehemaliger
                 {/* former */}Feldhockeyspieler{/* field hockey player */}, er
-                ist auch Goldmedaillengewinner bei den Olympischen Sommerspielen
-                1972. Es gibt auch Mathematiker{/* mathematician */} wie Edmund
-                Landau (1877–1938), und Bauingenieure wie Konrad Zuse
-                (1910–1995). Schließlich gibt es toll Leiter wie Wilhelm II
-                (1859–1941).
+                ist auch ein Goldmedaillengewinner bei den Olympischen
+                Sommerspielen 1972. Es gibt auch Mathematiker
+                {/* mathematician */} wie Edmund Landau (1877–1938), und
+                Bauingenieure wie Konrad Zuse (1910–1995). Schließlich gibt es
+                toll Leiter wie Wilhelm II (1859–1941).
               </AnimatedParagraph>
             </div>
           </div>

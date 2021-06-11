@@ -5,6 +5,17 @@ import Logo from "../images/logo.png";
 
 const THRESHOLD = 600;
 
+const SidebarItem = ({ children, location, home }) => {
+  return (
+    <div
+      className={home ? "side-bar-item side-bar-item-home" : "side-bar-item"}
+      onClick={() => (window.location = location)}
+    >
+      {children}
+    </div>
+  );
+};
+
 export default function Nav(props) {
   // Responsive Navigation Bar
 
@@ -76,20 +87,31 @@ export default function Nav(props) {
     >
       <a
         className={
-          currPath === "travel-guide" ? "nav-item nav-item-active" : "nav-item"
-        }
-        href="/travel-guide"
-      >
-        Travel Guide
-      </a>
-      <a
-        className={
           currPath === "sports" ? "nav-item nav-item-active" : "nav-item"
         }
         href="/sports"
       >
         Sports
       </a>
+      <a
+        className={
+          currPath === "political-parties"
+            ? "nav-item nav-item-active"
+            : "nav-item"
+        }
+        href="/political-parties"
+      >
+        Political Parties
+      </a>
+      <a
+        className={
+          currPath === "travel-guide" ? "nav-item nav-item-active" : "nav-item"
+        }
+        href="/travel-guide"
+      >
+        Travel Guide
+      </a>
+
       <a style={{ float: "left" }} className="nav-item" href="/">
         Home
       </a>
@@ -109,22 +131,15 @@ export default function Nav(props) {
         <div
           className="side-bar-item side-bar-item-home"
           onClick={() => (window.location = "/")}
-        >
+        ></div>
+        <SidebarItem home location="/">
           <img src={Logo} className="nav-logo" alt="nav-logo" />
-        </div>
-
-        <div
-          className="side-bar-item"
-          onClick={() => (window.location = "/travel-guide")}
-        >
-          Travel Guide
-        </div>
-        <div
-          className="side-bar-item"
-          onClick={() => (window.location = "/sports")}
-        >
-          Sports
-        </div>
+        </SidebarItem>
+        <SidebarItem location="/political-parties">
+          Political Parties
+        </SidebarItem>
+        <SidebarItem location="/travel-guide">Travel Guide</SidebarItem>
+        <SidebarItem location="/sports">Sports</SidebarItem>
       </div>
     </>
   );

@@ -50,6 +50,10 @@ export default function Footer() {
       </div>
       <FooterMobileLink text="Home" location="/" />
       <FooterMobileLink text="Travel Guide" location="/travel-guide" />
+      <FooterMobileLink
+        text="Political Parties"
+        location="/policital-parties"
+      />
       <FooterMobileLink text="Sports" location="/sports" />
 
       <div className="footer-sub__copyright mobile">
@@ -81,8 +85,13 @@ export default function Footer() {
         </div>
         <div className="footer-main__column">
           <h5 className="footer-column-title">Read about Berlin</h5>
+          <FooterColumnLink text="Home" location="/" />
           <FooterColumnLink text="Travel Guide" location="/travel-guide" />
           <FooterColumnLink text="Sports" location="/sports" />
+          <FooterColumnLink
+            text="Political Parties"
+            location="/political-parties"
+          />
         </div>
       </div>
       <div className="footer-sub">
