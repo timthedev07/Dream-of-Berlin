@@ -4,7 +4,6 @@ import Nav from "../components/Nav";
 import Berlin0 from "../images/berlin0.jpg";
 import Battle from "../images/battle0.jpg";
 import Communication from "../images/communication.jpg";
-import Parties from "../images/parties.jpg";
 import Celebration from "../images/celebrate.jpg";
 import Celebrities from "../images/celebrities.jpg";
 
@@ -142,10 +141,21 @@ export default function Home() {
             </div>
           </div>
           <div className="info-block">
-            <h1 className="info-heading">Politische Parteien</h1>
+            <h1 className="info-heading">Prominente</h1>
             <div className="info-inner-container-reversed reversed-text-first">
-              <Image image={Parties} position="right" />
-              <AnimatedParagraph position="left">TO-DO</AnimatedParagraph>
+              <Image image={Celebrities} position="right" />
+              <AnimatedParagraph position="left">
+                Es gibt viele bekannte berliner Superstars zum Beispiel, Kevyn
+                Lettau ist eine Jazzsängerin geboren 1959, Caroline Fischer ist
+                eine Pianistin geboren 1984, Götz George ist ein Akteur geboren
+                1938, und Carsten Keller ist ein ehemaliger
+                {/* former */}Feldhockeyspieler{/* field hockey player */}, er
+                ist auch Goldmedaillengewinner bei den Olympischen Sommerspielen
+                1972. Es gibt auch Mathematiker{/* mathematician */} wie Edmund
+                Landau (1877–1938), und Bauingenieure wie Konrad Zuse
+                (1910–1995). Schließlich gibt es toll Leiter wie Wilhelm II
+                (1859–1941).
+              </AnimatedParagraph>
             </div>
           </div>
           <div className="info-block">
@@ -153,16 +163,6 @@ export default function Home() {
             <div className="info-inner-container reversed-text-first">
               <Image image={Celebration} position="left" />
               <AnimatedParagraph position="right">TO-DO</AnimatedParagraph>
-            </div>
-          </div>
-          <div className="info-block">
-            <h1 className="info-heading">Prominente</h1>
-            <div className="info-inner-container-reversed reversed-text-first">
-              <Image image={Celebrities} position="right" />
-              <AnimatedParagraph position="left">
-                Es gibt viele bekannte berliner Persönlichkeiten in Berlin.
-                Kevyn Lettau, geboren 1959
-              </AnimatedParagraph>
             </div>
           </div>
         </div>
