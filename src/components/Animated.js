@@ -1,5 +1,4 @@
 import { SCROLL_ANIMATION_DURATION } from "../pages/Home";
-import LazyImage from "./Lazyimage";
 
 export const AnimatedList = ({
   children,
@@ -48,7 +47,7 @@ export const AnimatedParagraph = ({
 
 export const Image = ({ image, position }) => {
   return (
-    <LazyImage
+    <img
       src={image}
       alt="stuff"
       className={`info-image`}
