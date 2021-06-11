@@ -24,7 +24,7 @@ import BDom from "../images/bdom.jpg";
 import Army from "../images/army.jpg";
 import Tourism from "../images/tourism.jpg";
 
-const DEV_MODE = true;
+const DEV_MODE = false;
 
 const RestaurantMap = () => {
   return (
@@ -162,15 +162,20 @@ export default function Travel() {
           </div>
           <section className="content-section food-content">
             <h1 className="info-heading">Essen und Restaurants</h1>
-            <AnimatedParagraph fullWidth={true} position="left">
-              Es ist auch eine schöne Stadt mit allen Art von leckeren Speisen
-              in unterschiedlichen Restaurants.
-              <b>
-                <br />
-                Heir sind enige der traditionellen Gerichte einen Versuch wert
-                sind.
-              </b>
-            </AnimatedParagraph>
+            <div className="info-block">
+              <div className="info-inner-container reversed-text-first">
+                <Image image={Island} position="left" />
+                <AnimatedParagraph position="right">
+                  Es ist auch eine schöne Stadt mit allen Art von leckeren
+                  Speisen in unterschiedlichen Restaurants.
+                  <b>
+                    <br />
+                    Heir sind enige der traditionellen Gerichte einen Versuch
+                    wert sind.
+                  </b>
+                </AnimatedParagraph>
+              </div>
+            </div>
 
             <AnimatedList position="left" fullWidth={true}>
               <li>

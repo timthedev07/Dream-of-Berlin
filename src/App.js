@@ -8,6 +8,7 @@ import PrivacyPolicies from "./pages/PrivacyPolicies";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Footer from "./components/Footer";
 import Sports from "./pages/Sports";
+import Parties from "./pages/Parties";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -28,6 +29,9 @@ export default function App() {
             </Route>
             <Route exact path="/sports">
               <Sports />
+            </Route>
+            <Route exact path="/political-parties">
+              <Parties />
             </Route>
 
             {/* Policies */}
