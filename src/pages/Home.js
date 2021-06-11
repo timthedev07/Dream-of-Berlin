@@ -6,72 +6,8 @@ import Battle from "../images/battle0.jpg";
 import Communication from "../images/communication.jpg";
 import Celebration from "../images/celebrate.jpg";
 import Celebrities from "../images/celebrities.jpg";
-
+import { AnimatedParagraph, Image } from "../components/Animated";
 export const SCROLL_ANIMATION_DURATION = "700";
-
-export const AnimatedList = ({
-  children,
-  position,
-  fullWidth,
-  animationName,
-}) => {
-  return (
-    <ul
-      className={fullWidth ? "info-paragraph full-width" : "info-paragraph"}
-      data-aos={
-        animationName || position === "right" ? "fade-left" : "fade-right"
-      }
-      style={{ listStyle: '"⇒  "' }}
-      data-aos-once="true"
-      data-aos-duration={SCROLL_ANIMATION_DURATION}
-    >
-      {children}
-    </ul>
-  );
-};
-
-export const AnimatedParagraph = ({
-  children,
-  position,
-  fullWidth,
-  animationName,
-  additionalClassName,
-}) => {
-  return (
-    <p
-      className={
-        (fullWidth ? "info-paragraph full-width " : "info-paragraph ") +
-          additionalClassName || ""
-      }
-      data-aos={
-        animationName || position === "right" ? "fade-left" : "fade-right"
-      }
-      data-aos-once="true"
-      data-aos-duration={SCROLL_ANIMATION_DURATION}
-    >
-      {children}
-    </p>
-  );
-};
-
-export const Image = ({ image, position }) => {
-  return (
-    <img
-      src={image}
-      alt="stuff"
-      className={`info-image`}
-      data-aos={
-        position === "left"
-          ? "fade-right"
-          : position === "right"
-          ? "fade-left"
-          : ""
-      }
-      data-aos-once="true"
-      data-aos-duration={SCROLL_ANIMATION_DURATION}
-    />
-  );
-};
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(window.scrollY);
