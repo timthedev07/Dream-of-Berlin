@@ -2,7 +2,6 @@ import RouteControl from "./contexts/RouteControl";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./css/master.css";
 import Home from "./pages/Home";
-import Celebrities from "./pages/Celebrities";
 import Travel from "./pages/Travel";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicies from "./pages/PrivacyPolicies";
@@ -23,9 +22,6 @@ export default function App() {
             {/* Information pages */}
             <Route exact path="/">
               <Home />
-            </Route>
-            <Route exact path="/celebrities">
-              <Celebrities />
             </Route>
             <Route exact path="/travel-guide">
               <Travel />

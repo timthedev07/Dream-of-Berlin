@@ -5,6 +5,7 @@ import {
   AnimatedParagraph,
   SCROLL_ANIMATION_DURATION,
   AnimatedList,
+  Image,
 } from "./Home";
 import ReactGLMap, { Marker, Popup } from "react-map-gl";
 import { ReactComponent as MarkerIcon } from "../icons/marker.svg";
@@ -16,6 +17,12 @@ import Island from "../images/island.jpg";
 import Charlie from "../images/charlie.jpg";
 import Spy from "../images/spy.jpg";
 import Perg from "../images/perg.jpg";
+import Wall from "../images/wall.jpg";
+import NaturalScience from "../images/nature.jpg";
+import Wilhelm from "../images/wilhelm.jpg";
+import BDom from "../images/bdom.jpg";
+import Army from "../images/army.jpg";
+import Tourism from "../images/tourism.jpg";
 
 const DEV_MODE = true;
 
@@ -42,13 +49,11 @@ const RestaurantMap = () => {
   );
 };
 
-const AttractionsMap = ({ halfWidth }) => {
+const AttractionsMap = () => {
   const [mapState, setMapState] = useState({
-    // latitude: 52.5160511621844,
-    // longitude: 13.400762036365524,
-    latitude: 52.51864367760826,
-    longitude: 13.376899031775872,
-    zoom: 13,
+    latitude: 52.482502939478366,
+    longitude: 13.263164133157128,
+    zoom: 11,
     width: "100%",
     height: "100%",
   });
@@ -69,7 +74,12 @@ const AttractionsMap = ({ halfWidth }) => {
   }, []);
 
   return (
-    <div className="attractions-map-container">
+    <div
+      data-aos="zoom-out-up"
+      data-aos-duratino={SCROLL_ANIMATION_DURATION}
+      data-aos-once="true"
+      className="attractions-map-container"
+    >
       <ReactGLMap
         {...mapState}
         className="attractions-map info-paragraph"
@@ -110,7 +120,9 @@ const AttractionsMap = ({ halfWidth }) => {
             }}
           >
             <div className="popup-inner-wrapper">
-              <h4 className="black-text">{selectedSpot.name}</h4>
+              <h4 className="black-text" style={{ width: "min-content" }}>
+                {selectedSpot.name}
+              </h4>
               <img
                 className="popup-img"
                 src={selectedSpot.imgUrl}
@@ -134,17 +146,25 @@ export default function Travel() {
       <div id="travel-page" className="page-content">
         <div className="content-wrapper">
           <div className="info-block">
-            <h1 className="info-heading">Sehenswürdigkeiten</h1>
-            <div className="info-inner-container">
+            <h1 className="info-heading">Touristische Attraktionen</h1>
+            <div className="info-inner-container attractions-info-container">
+              <AnimatedParagraph fullWidth={true} position="right">
+                Berlin ist eine ziemlich historische Stadt. Folglich kann man
+                die Geschichte genießen und viele wunderbare Sehenswürdigkeiten
+                besuchen (zum Beispiel das Pergamonmuseum).
+                <br />
+                Hier stehen viele touristische Attraktionen zur Verfügung (Sieh
+                den Stadtplan unten), wir empfehlen Ihnen, sie besichtigen wenn
+                du reist in Berlin.
+              </AnimatedParagraph>
               <AttractionsMap />
-              <AnimatedParagraph position="right">TO-DO</AnimatedParagraph>
             </div>
           </div>
           <section className="content-section food-content">
             <h1 className="info-heading">Essen und Restaurants</h1>
             <AnimatedParagraph fullWidth={true} position="left">
-              Berlin ist eine schöne Stadt mit allen Art von leckeren Speisen in
-              unterschiedlichen Restaurants.
+              Es ist auch eine schöne Stadt mit allen Art von leckeren Speisen
+              in unterschiedlichen Restaurants.
               <b>
                 <br />
                 Heir sind enige der traditionellen Gerichte einen Versuch wert
@@ -172,6 +192,13 @@ export default function Travel() {
             </AnimatedParagraph>
             <RestaurantMap />
           </section>
+          <div className="info-block">
+            <h1 className="info-heading">Traditionelle Feste</h1>
+            <div className="info-inner-container reversed-text-first">
+              <Image image={Tourism} position="left" />
+              <AnimatedParagraph position="right">TO-DO</AnimatedParagraph>
+            </div>
+          </div>
         </div>
       </div>
     </>
@@ -220,6 +247,36 @@ const attractions = [
     longitude: 13.378716411906147,
     name: "Holocaust-Mahnmal",
     imgUrl: Holocaust,
+  },
+  {
+    latitude: 52.53503345292848,
+    longitude: 13.39019504827703,
+    name: "Gedenkstätte Berliner Mauer",
+    imgUrl: Wall,
+  },
+  {
+    latitude: 52.53056873406133,
+    longitude: 13.379183081887655,
+    name: "Museum für Naturkunde",
+    imgUrl: NaturalScience,
+  },
+  {
+    latitude: 52.504690275807846,
+    longitude: 13.335070406536502,
+    name: "Kaiser-Wilhelm-Gedächtniskirche",
+    imgUrl: Wilhelm,
+  },
+  {
+    latitude: 52.51892187351247,
+    longitude: 13.400502961166387,
+    name: "Berliner Dom",
+    imgUrl: BDom,
+  },
+  {
+    latitude: 52.47248998154964,
+    longitude: 13.138431757672791,
+    name: "Militärhistorisches Museum der Bundeswehr",
+    imgUrl: Army,
   },
 ];
 

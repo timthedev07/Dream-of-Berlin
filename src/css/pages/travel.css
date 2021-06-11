@@ -32,12 +32,18 @@
 }
 
 .attractions-map-container {
-  width: 65%;
+  width: 95%;
   height: 500px;
   display: block;
   position: relative;
   box-shadow: 5px 5px 10px rgb(43, 43, 43);
   border-radius: 15px;
+}
+.attractions-info-container.info-inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .attractions-map-container .info-paragraph.attractions-map {
   border-radius: 15px;

@@ -6,6 +6,7 @@ import Battle from "../images/battle0.jpg";
 import Communication from "../images/communication.jpg";
 import Parties from "../images/parties.jpg";
 import Celebration from "../images/celebrate.jpg";
+import Celebrities from "../images/celebrities.jpg";
 
 export const SCROLL_ANIMATION_DURATION = "700";
 
@@ -21,6 +22,7 @@ export const AnimatedList = ({
       data-aos={
         animationName || position === "right" ? "fade-left" : "fade-right"
       }
+      style={{ listStyle: '"⇒  "' }}
       data-aos-once="true"
       data-aos-duration={SCROLL_ANIMATION_DURATION}
     >
@@ -151,6 +153,16 @@ export default function Home() {
             <div className="info-inner-container reversed-text-first">
               <Image image={Celebration} position="left" />
               <AnimatedParagraph position="right">TO-DO</AnimatedParagraph>
+            </div>
+          </div>
+          <div className="info-block">
+            <h1 className="info-heading">Prominente</h1>
+            <div className="info-inner-container-reversed reversed-text-first">
+              <Image image={Celebrities} position="right" />
+              <AnimatedParagraph position="left">
+                Es gibt viele bekannte berliner Persönlichkeiten in Berlin.
+                Kevyn Lettau, geboren 1959
+              </AnimatedParagraph>
             </div>
           </div>
         </div>
