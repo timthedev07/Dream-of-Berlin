@@ -51,7 +51,6 @@ export default function Footer() {
       <FooterMobileLink text="Home" location="/" />
       <FooterMobileLink text="Travel Guide" location="/travel-guide" />
       <FooterMobileLink text="Sports" location="/sports" />
-      <FooterMobileLink text="Celebrities" location="/celebrities" />
 
       <div className="footer-sub__copyright mobile">
         2021 © Tim &nbsp;&nbsp;All Rights Reserved
@@ -84,7 +83,6 @@ export default function Footer() {
           <h5 className="footer-column-title">Read about Berlin</h5>
           <FooterColumnLink text="Travel Guide" location="/travel-guide" />
           <FooterColumnLink text="Sports" location="/sports" />
-          <FooterColumnLink text="Celebrities" location="/celebrities" />
         </div>
       </div>
       <div className="footer-sub">

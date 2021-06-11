@@ -5,14 +5,24 @@ import Berlin0 from "../images/berlin0.jpg";
 import Battle from "../images/battle0.jpg";
 import Communication from "../images/communication.jpg";
 import Parties from "../images/parties.jpg";
+import Celebration from "../images/celebrate.jpg";
+import Celebrities from "../images/celebrities.jpg";
 
 export const SCROLL_ANIMATION_DURATION = "700";
 
-export const AnimatedList = ({ children, position, fullWidth }) => {
+export const AnimatedList = ({
+  children,
+  position,
+  fullWidth,
+  animationName,
+}) => {
   return (
     <ul
       className={fullWidth ? "info-paragraph full-width" : "info-paragraph"}
-      data-aos={position === "right" ? "fade-left" : "fade-right"}
+      data-aos={
+        animationName || position === "right" ? "fade-left" : "fade-right"
+      }
+      style={{ listStyle: '"⇒  "' }}
       data-aos-once="true"
       data-aos-duration={SCROLL_ANIMATION_DURATION}
     >
@@ -21,11 +31,18 @@ export const AnimatedList = ({ children, position, fullWidth }) => {
   );
 };
 
-export const AnimatedParagraph = ({ children, position, fullWidth }) => {
+export const AnimatedParagraph = ({
+  children,
+  position,
+  fullWidth,
+  animationName,
+}) => {
   return (
     <p
       className={fullWidth ? "info-paragraph full-width" : "info-paragraph"}
-      data-aos={position === "right" ? "fade-left" : "fade-right"}
+      data-aos={
+        animationName || position === "right" ? "fade-left" : "fade-right"
+      }
       data-aos-once="true"
       data-aos-duration={SCROLL_ANIMATION_DURATION}
     >
@@ -34,7 +51,7 @@ export const AnimatedParagraph = ({ children, position, fullWidth }) => {
   );
 };
 
-const Image = ({ image, position }) => {
+export const Image = ({ image, position }) => {
   return (
     <img
       src={image}
@@ -76,8 +93,10 @@ export default function Home() {
       <div id="home-page" className="page-content">
         <div className="content-wrapper">
           <div className="info-block">
-            <h1 className="info-heading">Information und Fakten</h1>
-            <div className="info-inner-container">
+            <h1 className="info-heading" style={{ textAlign: "center" }}>
+              Information und Fakten
+            </h1>
+            <div className="info-inner-container lots-of-text reversed-text-first">
               <Image image={Berlin0} position="left" />
               <AnimatedParagraph position="right">
                 Berlin, die Hauptstadt Deutschlands, ist eine Stadt mit etwa
@@ -98,7 +117,7 @@ export default function Home() {
           </div>
           <div className="info-block">
             <h1 className="info-heading">Die Geschichte Kurze</h1>
-            <div className="info-inner-container-reversed">
+            <div className="info-inner-container-reversed reversed-text-first">
               <Image image={Battle} position="right" />
               <AnimatedParagraph position="left">
                 Berlin begann zunächst im 13 Jahrhundert und es steigt
@@ -110,7 +129,7 @@ export default function Home() {
           </div>
           <div className="info-block">
             <h1 className="info-heading">Dialekt von das Gebiet</h1>
-            <div className="info-inner-container">
+            <div className="info-inner-container reversed-text-first">
               <Image image={Communication} position="left" />
               <AnimatedParagraph position="right">
                 In Berlin es gibt einen speziellen Dialekt, bekannt als Berliner
@@ -124,9 +143,26 @@ export default function Home() {
           </div>
           <div className="info-block">
             <h1 className="info-heading">Politische Parteien</h1>
-            <div className="info-inner-container-reversed">
+            <div className="info-inner-container-reversed reversed-text-first">
               <Image image={Parties} position="right" />
               <AnimatedParagraph position="left">TO-DO</AnimatedParagraph>
+            </div>
+          </div>
+          <div className="info-block">
+            <h1 className="info-heading">Traditionelle Feste</h1>
+            <div className="info-inner-container reversed-text-first">
+              <Image image={Celebration} position="left" />
+              <AnimatedParagraph position="right">TO-DO</AnimatedParagraph>
+            </div>
+          </div>
+          <div className="info-block">
+            <h1 className="info-heading">Prominente</h1>
+            <div className="info-inner-container-reversed reversed-text-first">
+              <Image image={Celebrities} position="right" />
+              <AnimatedParagraph position="left">
+                Es gibt viele bekannte berliner Persönlichkeiten in Berlin.
+                Kevyn Lettau, geboren 1959
+              </AnimatedParagraph>
             </div>
           </div>
         </div>

@@ -76,14 +76,6 @@ export default function Nav(props) {
     >
       <a
         className={
-          currPath === "celebrities" ? "nav-item nav-item-active" : "nav-item"
-        }
-        href="/celebrities"
-      >
-        Celebrities
-      </a>
-      <a
-        className={
           currPath === "travel-guide" ? "nav-item nav-item-active" : "nav-item"
         }
         href="/travel-guide"
@@ -132,12 +124,6 @@ export default function Nav(props) {
           onClick={() => (window.location = "/sports")}
         >
           Sports
-        </div>
-        <div
-          className="side-bar-item"
-          onClick={() => (window.location = "/celebrities")}
-        >
-          Celebrities
         </div>
       </div>
     </>
