@@ -8,6 +8,14 @@ import {
 } from "./Home";
 import ReactGLMap, { Marker, Popup } from "react-map-gl";
 import { ReactComponent as MarkerIcon } from "../icons/marker.svg";
+/** images for attractions */
+import Reichstagsgebäude from "../images/Reichstagsgebäude.jpg";
+import Tor from "../images/Tor.jpg";
+import Holocaust from "../images/holocaust.webp";
+import Island from "../images/island.jpg";
+import Charlie from "../images/charlie.jpg";
+import Spy from "../images/spy.jpg";
+import Perg from "../images/perg.jpg";
 
 const DEV_MODE = true;
 
@@ -85,6 +93,7 @@ const AttractionsMap = ({ halfWidth }) => {
                     name: each.name,
                     latitude: each.latitude,
                     longitude: each.longitude,
+                    imgUrl: each.imgUrl,
                   });
                 }}
                 className="mapbox-marker-inner"
@@ -100,9 +109,13 @@ const AttractionsMap = ({ halfWidth }) => {
               setSelectedSpot(null);
             }}
           >
-            <div style={{ marginRight: "40px" }}>
+            <div className="popup-inner-wrapper">
               <h4 className="black-text">{selectedSpot.name}</h4>
-              <p className="black-text">Schöner Ort zu besuchen</p>
+              <img
+                className="popup-img"
+                src={selectedSpot.imgUrl}
+                alt="beautiful place"
+              />
             </div>
           </Popup>
         ) : null}
@@ -170,11 +183,43 @@ const attractions = [
     latitude: 52.51864367760826,
     longitude: 13.376899031775872,
     name: "Reichstagsgebäude",
+    imgUrl: Reichstagsgebäude,
   },
   {
     latitude: 52.516303958397565,
     longitude: 13.377494221977875,
     name: "Brandenburger Tor",
+    imgUrl: Tor,
+  },
+  {
+    latitude: 52.51693065246946,
+    longitude: 13.401900367170825,
+    name: "Museumsinsel",
+    imgUrl: Island,
+  },
+  {
+    latitude: 52.50743455975844,
+    longitude: 13.390361956571038,
+    name: "Grenzübergangsstelle",
+    imgUrl: Charlie,
+  },
+  {
+    latitude: 52.508761505446856,
+    longitude: 13.379237263873586,
+    name: "Deutsches Spionagemuseum",
+    imgUrl: Spy,
+  },
+  {
+    latitude: 52.52118079458849,
+    longitude: 13.396901339122442,
+    name: "Pergamonmuseum",
+    imgUrl: Perg,
+  },
+  {
+    latitude: 52.51392853560679,
+    longitude: 13.378716411906147,
+    name: "Holocaust-Mahnmal",
+    imgUrl: Holocaust,
   },
 ];
 

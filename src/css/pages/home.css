@@ -71,6 +71,7 @@
 .info-heading {
   font-family: "Playfair Italic";
   margin-bottom: 15px;
+  word-break: break-all;
 }
 
 .info-paragraph {
