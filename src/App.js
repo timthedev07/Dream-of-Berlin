@@ -29,7 +29,7 @@ export default function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            {/* <Route exact path="/home">
+            <Route exact path="/home">
               <Redirect to="/" />
             </Route>
             <Route exact path="/travel-guide">
@@ -49,10 +49,11 @@ export default function App() {
             <Route exact path="/privacy-policies">
               <PrivacyPolicies />
             </Route>
+
             {/* 404 */}
             <Route>
               <NotFound />
-            </Route>{" "}
+            </Route>
           </Switch>
         </RouteControl>
       </Router>
