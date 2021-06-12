@@ -56,18 +56,6 @@
   background-color: rgba(205, 211, 212, 0.205);
 }
 
-.info-image {
-  width: 45%;
-  height: auto;
-  float: right;
-  border: 0px gray solid;
-  margin: 10px;
-  border-radius: 20px;
-  resize: none;
-  object-fit: cover;
-  box-shadow: 4px 4px 15px 0px rgb(32, 32, 32);
-}
-
 .info-heading {
   font-family: "Playfair Italic";
   margin-bottom: 15px;

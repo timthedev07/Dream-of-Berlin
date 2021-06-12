@@ -8,6 +8,7 @@
 @import url(./components/footer.css);
 @import url(./components/animatedButton.css);
 @import url(./components/macosWindow.css);
+@import url(./components/lazy-image.css);
 
 /* css for each page */
 @import url(./pages/404.css);
