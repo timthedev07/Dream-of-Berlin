@@ -5,6 +5,8 @@
   padding-top: 10px;
   padding-left: 20px;
   z-index: 6000;
+  position: fixed;
+  width: 100vw;
   min-width: var(--min-width);
   font-family: "Rubik Light";
 }

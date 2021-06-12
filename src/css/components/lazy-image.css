@@ -1,0 +1,47 @@
+.info-image {
+  width: 100%;
+  height: auto;
+  float: right;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.info-image-wrapper {
+  width: 100%;
+  height: fit-content;
+  border-radius: 20px;
+}
+.info-image-container {
+  width: 45%;
+  height: fit-content;
+  float: right;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 15px 0px rgb(32, 32, 32);
+  position: relative;
+}
+
+.image-placeholder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  z-index: 300;
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
