@@ -56,7 +56,7 @@ export default function Travel() {
                 <Link href="https://www.google.com/travel/hotels/Berlin?g2lb=2502548%2C2503781%2C4258168%2C4270442%2C4306835%2C4317915%2C4371335%2C4401769%2C4419364%2C4482438%2C4486153%2C4509341%2C4536454%2C4545889%2C4564872%2C4570611%2C4270859%2C4284970%2C4291517&hl=en-ES&gl=es&ssta=1&ap=SAFoAQ&q=berlin%20hotels&rp=EKGPsurfv5e1rQEQ4Jynt_W738S8ARDLjIjJjLyH6C8Q2f3tmL_9t_IZOAFAAEgCogEPQmVybGluLCBHZXJtYW55&ictx=1&ved=0CAAQ5JsGahcKEwiYwOySm5DxAhUAAAAAHQAAAAAQAg&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAESCgoCCAMKAggDEAAaMwoVEhE6D0JlcmxpbiwgR2VybWFueRoAEhoSFAoHCOUPEAYYHBIHCOUPEAYYHRgBMgIQACoLCgcoAToDRVVSGgA">
                   link
                 </Link>
-                für mehr Informationen.
+                für mehr Information.
               </AnimatedParagraph>
             </div>
           </div>

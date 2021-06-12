@@ -61,7 +61,8 @@
   margin-bottom: 15px;
   word-break: break-all;
 }
-.info-heading.heading-center {
+.info-heading.heading-center,
+.heading-center {
   text-align: center;
 }
 

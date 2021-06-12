@@ -57,7 +57,7 @@ export const AttractionsMap = () => {
   return (
     <div
       data-aos="zoom-out-up"
-      data-aos-duratino={SCROLL_ANIMATION_DURATION}
+      data-aos-duration={SCROLL_ANIMATION_DURATION}
       data-aos-once="true"
       className="attractions-map-container"
     >

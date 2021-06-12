@@ -16,6 +16,7 @@
 @import url(./pages/policies.css);
 @import url(./pages/sports.css);
 @import url(./pages/travel.css);
+@import url(./pages/parties.css);
 
-/* custom properties */
+/* custom global properties */
 @import url(./var.css);
