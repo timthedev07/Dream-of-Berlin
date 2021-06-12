@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import HighlightedNumber from "../components/HighlightedNumber";
+import Highlight from "../components/Highlight";
 import Nav from "../components/Nav";
 import Berlin0 from "../images/berlin0.jpg";
 import Battle from "../images/battle0.jpg";
@@ -39,13 +39,14 @@ export default function Home() {
               <Image image={Berlin0} position="left" />
               <AnimatedParagraph position="right">
                 Berlin, die Hauptstadt Deutschlands, ist eine Stadt mit etwa
-                <HighlightedNumber text="3,567,000" /> Einwohnern und einer
-                Fläche von <HighlightedNumber text="891,8 km²" />. Berlin ist
-                die Großte Stadt von Deutschland, während neunmal größer als
-                Paris ist, obwohl es nur <HighlightedNumber text="1 / 5" /> von
-                die population von paris hat. Es gibt viel Monumente im Berlin,
-                es gibt Museen historische, es gibt auch ikonische Gebäude. Die
-                Stadt wird in <HighlightedNumber text="12" />
+                <Highlight>3,567,000</Highlight> Einwohnern und einer Fläche von
+                <Highlight>891,8 km²</Highlight>. Berlin ist die Größte Stadt
+                von Deutschland, während neunmal größer als Paris ist, obwohl es
+                nur
+                <Highlight>1 / 5</Highlight> von die population von paris hat.
+                Es gibt viel Monumente im Berlin, es gibt Museen historische, es
+                gibt auch ikonische Gebäude. Die Stadt wird in
+                <Highlight>12</Highlight>
                 Bezirken geteilt, die Mitte, Friedrichshain-Kreuzberg, Pankow,
                 Charlottenburg-Wilmerdorf, Spandau, Steglitz-Zehlendorf,
                 Tempelhof-Schöneberg, Neukölln, Treptow-Köpenick,
@@ -59,10 +60,11 @@ export default function Home() {
             <div className="info-inner-container-reversed reversed-text-first">
               <Image image={Battle} position="right" />
               <AnimatedParagraph position="left">
-                Berlin begann zunächst im 13 Jahrhundert und es steigt
-                unaufhaltsam weiter. Nach 1900 Berlin ist eine Großstadt
-                geworden aufgrund seiner Überlegenheit in Wissenschaft, Bildung,
-                Militär und Kultur zu einer der wichtigsten Städte der Welt.
+                Berlin begann zunächst im <Highlight>13 Jahrhundert</Highlight>
+                und es steigt unaufhaltsam weiter. Nach
+                <Highlight>1900</Highlight> Berlin ist eine Großstadt geworden
+                aufgrund seiner Überlegenheit in Wissenschaft, Bildung, Militär
+                und Kultur zu einer der wichtigsten Städte der Welt.
               </AnimatedParagraph>
             </div>
           </div>
@@ -74,7 +76,7 @@ export default function Home() {
                 In Berlin es gibt einen speziellen Dialekt, bekannt als Berliner
                 Dialekt (alias Berlinerisch). Es stammt ursprünglich aus ein
                 Brandenburgisch Dialekt. Es hat etwa
-                <HighlightedNumber text="5 Millionen" /> Sprecher obwohl die
+                <Highlight>5 Millionen</Highlight> Sprecher obwohl die
                 Bildungsschicht bemühte sich stets distanzierend um
                 einwandfreies Hochdeutsch.
               </AnimatedParagraph>
@@ -85,16 +87,20 @@ export default function Home() {
             <div className="info-inner-container-reversed reversed-text-first">
               <Image image={Celebrities} position="right" />
               <AnimatedParagraph position="left">
-                Es gibt viele bekannte berliner Superstars zum Beispiel, Kevyn
-                Lettau ist eine Jazzsängerin geboren 1959, Caroline Fischer ist
-                eine Pianistin geboren 1984, Götz George ist ein Akteur geboren
-                1938, und Carsten Keller ist ein ehemaliger
+                Es gibt viele bekannte berliner Superstars zum Beispiel,
+                <Highlight>Kevyn Lettau</Highlight> ist eine Jazzsängerin
+                geboren 1959, <Highlight>Caroline Fischer</Highlight> ist eine
+                Pianistin geboren 1984, <Highlight>Götz George</Highlight> ist
+                ein Akteur geboren 1938, und
+                <Highlight>Carsten Keller</Highlight> ist ein ehemaliger
                 {/* former */}Feldhockeyspieler{/* field hockey player */}, er
                 ist auch ein Goldmedaillengewinner bei den Olympischen
                 Sommerspielen 1972. Es gibt auch Mathematiker
-                {/* mathematician */} wie Edmund Landau (1877–1938), und
-                Bauingenieure wie Konrad Zuse (1910–1995). Schließlich gibt es
-                toll Leiter wie Wilhelm II (1859–1941).
+                {/* mathematician */} wie <Highlight>Edmund Landau</Highlight>
+                (1877–1938), und Bauingenieure wie
+                <Highlight>Konrad Zuse</Highlight> (1910–1995). Schließlich gibt
+                es toll Leiter wie <Highlight>Wilhelm II</Highlight>
+                (1859–1941).
               </AnimatedParagraph>
             </div>
           </div>
