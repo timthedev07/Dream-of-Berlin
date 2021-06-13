@@ -61,7 +61,8 @@
   margin-bottom: 15px;
   word-break: break-all;
 }
-.info-heading.heading-center {
+.info-heading.heading-center,
+.heading-center {
   text-align: center;
 }
 
@@ -102,7 +103,7 @@
 /* mobile */
 @media screen and (max-width: 700px) {
   .info-paragraph,
-  .info-image {
+  .info-image-container {
     width: 90%;
   }
   .info-inner-container,
@@ -114,7 +115,7 @@
 
 @media screen and (max-width: 880px) {
   .info-paragraph,
-  .info-image {
+  .info-image-container {
     width: 90%;
   }
   .info-heading {

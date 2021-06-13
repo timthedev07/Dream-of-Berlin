@@ -9,6 +9,7 @@
 @import url(./components/animatedButton.css);
 @import url(./components/macosWindow.css);
 @import url(./components/lazy-image.css);
+@import url(./components/olympian-card.css);
 
 /* css for each page */
 @import url(./pages/404.css);
@@ -16,6 +17,7 @@
 @import url(./pages/policies.css);
 @import url(./pages/sports.css);
 @import url(./pages/travel.css);
+@import url(./pages/parties.css);
 
-/* custom properties */
+/* custom global properties */
 @import url(./var.css);
