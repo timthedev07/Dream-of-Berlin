@@ -103,7 +103,7 @@
 /* mobile */
 @media screen and (max-width: 700px) {
   .info-paragraph,
-  .info-image {
+  .info-image-container {
     width: 90%;
   }
   .info-inner-container,
@@ -115,7 +115,7 @@
 
 @media screen and (max-width: 880px) {
   .info-paragraph,
-  .info-image {
+  .info-image-container {
     width: 90%;
   }
   .info-heading {

@@ -107,7 +107,7 @@ export default function Travel() {
             <div className="info-inner-container-reversed reversed-text-first">
               <AnimatedParagraph
                 additionalClassName="large-width"
-                position="left"
+                position="right"
               >
                 Berlin ist ein beliebter Ort für Touristen, weil gibt so viele
                 Dinge zu machen es! Es gibt eine Menge Museen, ikonische
@@ -119,7 +119,7 @@ export default function Travel() {
                 es gab insgesamt etwa 14 Millionen in 2019! (lass uns nicht über
                 2020/2021 reden)
               </AnimatedParagraph>
-              <Image image={MarketingGif} />
+              <Image position="left" image={MarketingGif} />
             </div>
           </div>
         </div>

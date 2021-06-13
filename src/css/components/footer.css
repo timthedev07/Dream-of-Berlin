@@ -6,6 +6,7 @@
   height: max-content;
   box-shadow: 0 5px 5px -5px black;
   min-width: var(--min-width);
+  position: sticky;
 }
 
 .footer .footer-main {

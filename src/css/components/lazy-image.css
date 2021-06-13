@@ -14,6 +14,7 @@
 .info-image-container {
   width: 45%;
   height: fit-content;
+  display: block;
   float: right;
   margin: 10px;
   border-radius: 20px;
@@ -44,4 +45,18 @@
   100% {
     background-color: #fff;
   }
+}
+
+.lazy-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.lazy-image-container {
+  width: 100%;
+  height: fit-content;
+  display: block;
+  float: right;
+  box-shadow: 4px 4px 15px 0px rgb(32, 32, 32);
+  position: relative;
 }

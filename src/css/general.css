@@ -39,3 +39,19 @@ body {
     padding: 0px;
   }
 }
+
+.ps-absolute {
+  position: absolute;
+}
+
+.ps-relative {
+  position: relative;
+}
+
+.ps-sticky {
+  position: sticky;
+}
+
+.dp-block {
+  display: block;
+}
