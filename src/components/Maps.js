@@ -4,6 +4,7 @@ import ReactGLMap, { Marker, Popup } from "react-map-gl";
 import { ReactComponent as MarkerIcon } from "../icons/marker.svg";
 import { SCROLL_ANIMATION_DURATION } from "../pages/Home";
 import { attractions, pushPins } from "./MapData";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 const DEV_MODE = false;
 
