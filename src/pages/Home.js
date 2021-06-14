@@ -6,7 +6,7 @@ import Battle from "../images/battle0.jpg";
 import Communication from "../images/communication.jpg";
 import Celebration from "../images/celebrate.jpg";
 import Celebrities from "../images/celebrities.jpg";
-import { AnimatedParagraph, Image } from "../components/Animated";
+import { AnimatedList, AnimatedParagraph, Image } from "../components/Animated";
 export const SCROLL_ANIMATION_DURATION = "700";
 
 export default function Home() {
@@ -105,10 +105,23 @@ export default function Home() {
             </div>
           </div>
           <div className="info-block">
-            <h1 className="info-heading">Traditionelle Feste</h1>
+            <h1 className="info-heading">Traditionelle Festivals</h1>
             <div className="info-inner-container reversed-text-first">
               <Image image={Celebration} position="left" />
-              <AnimatedParagraph position="right">TO-DO</AnimatedParagraph>
+              <AnimatedParagraph position="right">
+                Sie werden sehr wahrscheinlich über einige der traditionellen
+                Berliner Feste stolpern wenn sie reisen in Berlin, und sie
+                werden es auf jeden Fall lieben!
+              </AnimatedParagraph>
+              <AnimatedList position="right">
+                <li>Die Internationale Filmfestspiele Berlin</li>
+                <li>Jazzfest Berlin</li>
+                <li>Karneval der Kulturen</li>
+                <li>Lange Nachte der Museen</li>
+                <li>Internationale Funkausstellung Berlin</li>
+                <li>Museumsinsel Festival</li>
+                <li>Internationales Berliner Bierfestival</li>
+              </AnimatedList>
             </div>
           </div>
         </div>
