@@ -82,6 +82,10 @@ export default function Footer() {
           <a className="footer-column-link" href="/terms-and-conditions">
             Terms and Conditions
           </a>
+
+          <a className="footer-column-link" href="/credit">
+            Credit
+          </a>
         </div>
         <div className="footer-main__column">
           <h5 className="footer-column-title">Read about Berlin</h5>

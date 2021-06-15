@@ -14,6 +14,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import Footer from "./components/Footer";
 import Sports from "./pages/Sports";
 import Parties from "./pages/Parties";
+import Credit from "./pages/Credit";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -48,6 +49,11 @@ export default function App() {
             </Route>
             <Route exact path="/privacy-policies">
               <PrivacyPolicies />
+            </Route>
+
+            {/* credit */}
+            <Route exact path="/credit">
+              <Credit />
             </Route>
 
             {/* 404 */}
