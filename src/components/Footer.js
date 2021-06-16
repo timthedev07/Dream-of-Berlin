@@ -52,7 +52,7 @@ export default function Footer() {
       <FooterMobileLink text="Travel Guide" location="/travel-guide" />
       <FooterMobileLink
         text="Political Parties"
-        location="/policital-parties"
+        location="/political-parties"
       />
       <FooterMobileLink text="Sports" location="/sports" />
 
