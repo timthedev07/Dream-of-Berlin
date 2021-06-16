@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import LazyLoad from "react-lazyload";
-import { SCROLL_ANIMATION_DURATION } from "../pages/Home";
 
 export default function OlympianCard({
   image,
@@ -25,7 +24,7 @@ export default function OlympianCard({
         `${noOffset ? " no-offset" : ""}`
       }
       data-aos="fade-up"
-      data-aos-duration={SCROLL_ANIMATION_DURATION}
+      data-aos-duration={"2200"}
       data-aos-once="true"
     >
       <div className="olympian-card__text-container">
