@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.9e9b1d07.chunk.css",
-    "main.js": "/static/js/main.95a2eb64.chunk.js",
-    "main.js.map": "/static/js/main.95a2eb64.chunk.js.map",
+    "main.js": "/static/js/main.a1ca243c.chunk.js",
+    "main.js.map": "/static/js/main.a1ca243c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4051cdb7.js",
     "runtime-main.js.map": "/static/js/runtime-main.4051cdb7.js.map",
     "static/css/2.c1869cdc.chunk.css": "/static/css/2.c1869cdc.chunk.css",
-    "static/js/2.df188553.chunk.js": "/static/js/2.df188553.chunk.js",
-    "static/js/2.df188553.chunk.js.map": "/static/js/2.df188553.chunk.js.map",
+    "static/js/2.ab2ade14.chunk.js": "/static/js/2.ab2ade14.chunk.js",
+    "static/js/2.ab2ade14.chunk.js.map": "/static/js/2.ab2ade14.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.c1869cdc.chunk.css.map": "/static/css/2.c1869cdc.chunk.css.map",
     "static/css/main.9e9b1d07.chunk.css.map": "/static/css/main.9e9b1d07.chunk.css.map",
-    "static/js/2.df188553.chunk.js.LICENSE.txt": "/static/js/2.df188553.chunk.js.LICENSE.txt",
+    "static/js/2.ab2ade14.chunk.js.LICENSE.txt": "/static/js/2.ab2ade14.chunk.js.LICENSE.txt",
     "static/media/404.00dccb09.jpg": "/static/media/404.00dccb09.jpg",
     "static/media/master.css": "/static/media/sportmobile.52847b6e.jpg",
     "static/media/Reichstagsgebäude.e80f54be.jpg": "/static/media/Reichstagsgebäude.e80f54be.jpg",
@@ -29,6 +29,7 @@
     "static/media/earth.fd2f3f84.svg": "/static/media/earth.fd2f3f84.svg",
     "static/media/foodcollage.741e62a7.jpg": "/static/media/foodcollage.741e62a7.jpg",
     "static/media/franziska.a34d5694.jpg": "/static/media/franziska.a34d5694.jpg",
+    "static/media/getFetch.cjs": "/static/media/getFetch.582d29c4.cjs",
     "static/media/hagen.a9e4ef55.jpg": "/static/media/hagen.a9e4ef55.jpg",
     "static/media/holocaust.873a6377.webp": "/static/media/holocaust.873a6377.webp",
     "static/media/hotels.1dffd558.webp": "/static/media/hotels.1dffd558.webp",
@@ -42,7 +43,7 @@
     "static/media/marker.8be6fd95.svg": "/static/media/marker.8be6fd95.svg",
     "static/media/marketing.d9ea3e6e.gif": "/static/media/marketing.d9ea3e6e.gif",
     "static/media/nature.6584151e.jpg": "/static/media/nature.6584151e.jpg",
-    "static/media/olympics0.620948ab.jpg": "/static/media/olympics0.620948ab.jpg",
+    "static/media/olympics0.6ac9d8db.jpg": "/static/media/olympics0.6ac9d8db.jpg",
     "static/media/perg.8d9a4213.jpg": "/static/media/perg.8d9a4213.jpg",
     "static/media/snooker.3db7c195.jpg": "/static/media/snooker.3db7c195.jpg",
     "static/media/spy.ae816471.jpg": "/static/media/spy.ae816471.jpg",
@@ -53,8 +54,8 @@
   "entrypoints": [
     "static/js/runtime-main.4051cdb7.js",
     "static/css/2.c1869cdc.chunk.css",
-    "static/js/2.df188553.chunk.js",
+    "static/js/2.ab2ade14.chunk.js",
     "static/css/main.9e9b1d07.chunk.css",
-    "static/js/main.95a2eb64.chunk.js"
+    "static/js/main.a1ca243c.chunk.js"
   ]
 }
