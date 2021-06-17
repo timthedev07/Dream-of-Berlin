@@ -67,7 +67,7 @@ export default function Travel() {
               in unterschiedlichen Restaurants.
               <b>
                 <br />
-                Heir sind enige der traditionellen Gerichte einen Versuch wert
+                Hier sind enige der traditionellen Gerichte einen Versuch wert
                 sind.
               </b>
             </AnimatedParagraph>

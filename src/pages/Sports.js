@@ -86,7 +86,7 @@ export default function Sports() {
         </h1>
         <div className="ps-relative dp-block margined-div">
           Berlin ist eine Stadt überlegen in viele Felder, einschließlich
-          Sportarten. Es ist eine Stadt {"full of sport facilities"} und
+          Sportarten. Es ist eine Stadt voller Sporteinrichtungen und
           leidenschaftlich über Sport sind die Bürger auch. Die berliner spielen
           ziemlich gern <Highlight>Fußball</Highlight>, und es gibt zwei große
           in Berlin, sie sind Hertha BSC und FC Union Berlin. Außerdem, gibt es
