@@ -1,4 +1,12 @@
-export default function Alert(props) {
+import { Dispatch, FC, SetStateAction } from "react";
+
+interface Props {
+  setActive: Dispatch<SetStateAction<boolean>>;
+  active: boolean;
+  text: string;
+  type?: string;
+}
+export const Alert: FC<Props> = (props) => {
   const handleClick = () => {
     props.setActive(false);
   };
@@ -13,9 +21,9 @@ export default function Alert(props) {
       <img
         src="/images/icons/close.svg"
         alt=""
-        onClick={() => handleClick()}
+        onClick={handleClick}
         className="close-icon"
       />
     </div>
   );
-}
+};
