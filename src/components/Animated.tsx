@@ -1,8 +1,13 @@
-import { useRef } from "react";
+import { FC } from "react";
 import { SCROLL_ANIMATION_DURATION } from "../pages/index.jsx";
-import Lazyload from "react-lazyload";
 
-export const AnimatedList = ({
+interface AnimatedListProps {
+  position: "left" | "right";
+  fullWidth: boolean;
+  animationName: string;
+}
+
+export const AnimatedList: FC<AnimatedListProps> = ({
   children,
   position,
   fullWidth,
@@ -23,13 +28,9 @@ export const AnimatedList = ({
   );
 };
 
-export const AnimatedParagraph = ({
-  children,
-  position,
-  fullWidth,
-  animationName,
-  additionalClassName,
-}) => {
+export const AnimatedParagraph: FC<
+  AnimatedListProps & { additionalClassName?: string }
+> = ({ children, position, fullWidth, animationName, additionalClassName }) => {
   return (
     <p
       className={
@@ -47,15 +48,14 @@ export const AnimatedParagraph = ({
   );
 };
 
-export const Image = ({ image, position }) => {
-  const placeholderRef = useRef();
-
-  const finishLoading = () => {
-    setTimeout(() => {
-      placeholderRef.current.remove();
-    }, 700);
-  };
-
+interface AnimatedImageProps {
+  imagePath: string;
+  position: "left" | "right";
+}
+export const AnimatedImage: FC<AnimatedImageProps> = ({
+  imagePath,
+  position,
+}) => {
   return (
     <div
       data-aos={
@@ -69,15 +69,9 @@ export const Image = ({ image, position }) => {
       data-aos-duration={SCROLL_ANIMATION_DURATION}
       className="info-image-container"
     >
-      <div ref={placeholderRef} className="image-placeholder"></div>
-      <Lazyload className={`info-image-wrapper`} once offset={200}>
-        <img
-          onLoad={() => finishLoading()}
-          src={image}
-          alt="stuff"
-          className={`info-image`}
-        />
-      </Lazyload>
+      <div className={`info-image-wrapper`}>
+        <img src={imagePath} alt="stuff" className={`info-image`} />
+      </div>
     </div>
   );
 };
