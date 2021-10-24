@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { SCROLL_ANIMATION_DURATION } from "../pages/Home";
+import { SCROLL_ANIMATION_DURATION } from "../pages/index.jsx";
 import Lazyload from "react-lazyload";
 
 export const AnimatedList = ({
