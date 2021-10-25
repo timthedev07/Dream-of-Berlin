@@ -107,7 +107,7 @@ export const Footer: FC = () => {
       </div>
       <div className="footer-sub">
         <div className="footer-sub__copyright">
-          2021 © Tim &nbsp;&nbsp;All Rights Reserved
+          2021 © Cristina {"&"} Tim &nbsp;&nbsp;All Rights Reserved
         </div>
       </div>
     </footer>
