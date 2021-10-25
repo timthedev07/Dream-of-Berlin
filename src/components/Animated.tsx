@@ -2,9 +2,9 @@ import { FC } from "react";
 import { SCROLL_ANIMATION_DURATION } from "../pages/index.jsx";
 
 interface AnimatedListProps {
-  position: "left" | "right";
-  fullWidth: boolean;
-  animationName: string;
+  position?: "left" | "right";
+  fullWidth?: boolean;
+  animationName?: string;
 }
 
 export const AnimatedList: FC<AnimatedListProps> = ({
@@ -17,7 +17,11 @@ export const AnimatedList: FC<AnimatedListProps> = ({
     <ul
       className={fullWidth ? "info-paragraph full-width" : "info-paragraph"}
       data-aos={
-        animationName || position === "right" ? "fade-left" : "fade-right"
+        animationName || position
+          ? position === "right"
+            ? "fade-left"
+            : "fade-right"
+          : ""
       }
       style={{ listStyle: '"⇒  "' }}
       data-aos-once="true"
@@ -38,7 +42,11 @@ export const AnimatedParagraph: FC<
           additionalClassName || ""
       }
       data-aos={
-        animationName || position === "right" ? "fade-left" : "fade-right"
+        animationName || position
+          ? position === "right"
+            ? "fade-left"
+            : "fade-right"
+          : ""
       }
       data-aos-once="true"
       data-aos-duration={SCROLL_ANIMATION_DURATION}
