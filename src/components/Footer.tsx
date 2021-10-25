@@ -1,20 +1,26 @@
-import React, { useState, useEffect } from "react";
-import Logo from "../images/logo.png";
+import React, { useState, useEffect, FC } from "react";
+import { useRouter } from "next/router";
 
 const THRESHOLD = 670;
 
-function FooterMobileLink(props) {
+interface FooterMobileLinkProps {
+  location: string;
+  text: string;
+}
+const FooterMobileLink: FC<FooterMobileLinkProps> = (props) => {
+  const { push } = useRouter();
   return (
-    <div
-      className="footer-mobile-links"
-      onClick={() => (window.location = props.location)}
-    >
+    <div className="footer-mobile-links" onClick={() => push(props.location)}>
       {props.text}
     </div>
   );
-}
+};
 
-const FooterColumnLink = ({ text, location }) => {
+interface FooterColumnLinkProps {
+  text: string;
+  location: string;
+}
+const FooterColumnLink: FC<FooterColumnLinkProps> = ({ text, location }) => {
   return (
     <a className="footer-column-link" href={location}>
       {text}
@@ -22,15 +28,16 @@ const FooterColumnLink = ({ text, location }) => {
   );
 };
 
-export default function Footer() {
+export const Footer: FC = () => {
   // setting up a state holding the current screen width
-  const [windowWidth, setWindowWidth] = useState(() => window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(() => 0);
+  const logoPath = "/images/logo.png";
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -45,7 +52,7 @@ export default function Footer() {
   return isSmallScreen() ? (
     <footer className="footer-mobile footer">
       <div className="footer-mobile-links footer-mobile-header">
-        <img src={Logo} alt="logo" />
+        <img src={logoPath} alt="logo" />
         <h6>Dream of Berlin</h6>
       </div>
       <FooterMobileLink text="Home" location="/" />
@@ -66,7 +73,7 @@ export default function Footer() {
         <div className="footer-main__column">
           <img
             style={{ margin: "5px" }}
-            src={Logo}
+            src={logoPath}
             className="footer-logo"
             alt="Logo"
           />
@@ -105,4 +112,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
