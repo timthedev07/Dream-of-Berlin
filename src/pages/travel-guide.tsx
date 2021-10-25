@@ -107,8 +107,8 @@ const Travel: NextPage = () => {
             <AnimatedParagraph fullWidth={true}>
               Wir auflisten einige die beste Restaurants auf Berlin:
             </AnimatedParagraph>
-            <RestaurantMap />
           </section>
+          <RestaurantMap />
           <div className="info-block">
             <h1 className="info-heading heading-center">Tourismus</h1>
             <div className="horizontal-line"></div>
