@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import ReactGLMap, { Marker, Popup } from "react-map-gl";
 import { SCROLL_ANIMATION_DURATION } from "../pages/index";
-import { AttractionData, attractions, RestaurantData } from "../data/MapData";
+import {
+  AttractionData,
+  attractions,
+  RestaurantData,
+  restaurants,
+} from "../data/MapData";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 const DEV_MODE = false;
@@ -47,7 +52,7 @@ export const RestaurantMap = () => {
           }}
           mapStyle="mapbox://styles/im-just-a-dev/ckpr6pit02jhi18qhjckjcdzg"
         >
-          {attractions.map((each) => {
+          {restaurants.map((each) => {
             return (
               <Marker
                 key={`${each.name}`}
