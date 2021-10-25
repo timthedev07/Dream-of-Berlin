@@ -32,20 +32,20 @@ export const Nav: FC<NavbarProps> = (props) => {
   const { asPath, push } = useRouter();
 
   // defining a state that holds the current window size
-  const [windowWidth, setWindowWidth] = useState(() => window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   // holding whether or not the sidebar(on smaller screens) is opened
   const [sideBarOpen, setSideBarOpen] = useState(() => false);
 
   // holding the scroll progress
-  const [scrollY, setScrollY] = useState(() => window.scrollY);
+  const [scrollY, setScrollY] = useState(0);
 
   // adds a sticky class to nav bar according to the window scroll
   function classManipulator() {
     if (!navBarRef.current) return;
 
     var sticky = navBarRef.current.offsetTop;
-    setScrollY(window.pageYOffset);
+    setScrollY(window.scrollY);
     if (window.pageYOffset >= sticky) {
       navBarRef.current.classList.add("sticky");
     } else {
@@ -59,6 +59,8 @@ export const Nav: FC<NavbarProps> = (props) => {
       setWindowWidth(window.innerWidth);
       classManipulator();
     };
+
+    handleResize();
 
     const handleScroll = () => {
       classManipulator();

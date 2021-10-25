@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { SCROLL_ANIMATION_DURATION } from "../pages/index.jsx";
+import { SCROLL_ANIMATION_DURATION } from "../pages/index";
 
 interface AnimatedListProps {
   position?: "left" | "right";

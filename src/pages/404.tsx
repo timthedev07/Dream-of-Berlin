@@ -11,7 +11,7 @@ const NotFound: NextPage = () => {
       <div id="not-found-page" className="page-content">
         <div className="not-found-content">
           <h1>
-            4<img src="/images/earth.svg" alt="" />4
+            4<img src="/images/earth.svg" style={{ width: "" }} alt="" />4
           </h1>
           <h3>The page you were looking for was not found.</h3>
           <button
