@@ -3,11 +3,11 @@
 }
 
 body {
-  background-color: var(--content-bg-color);
+  background-color: var(--content-bg-color) !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: var(--content-color);
-  font-family: "Rubik Regular";
+  color: var(--content-color) !important;
+  font-family: "Rubik Regular" !important;
   margin: 0 0;
 }
 

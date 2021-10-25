@@ -1,0 +1,23 @@
+@import url(./general.css);
+/* css for each component */
+@import url(./components/navigation/nav.module.css);
+@import url(./components/navigation/sidebar.module.css);
+@import url(./components/menuBtn.module.css);
+@import url(./components/loading.module.css);
+@import url(./components/alert.module.css);
+@import url(./components/footer.module.css);
+@import url(./components/animatedButton.module.css);
+@import url(./components/macosWindow.module.css);
+@import url(./components/lazy-image.module.css);
+@import url(./components/olympian-card.module.css);
+
+/* css for each page */
+@import url(./pages/404.module.css);
+@import url(./pages/home.module.css);
+@import url(./pages/policies.module.css);
+@import url(./pages/sports.module.css);
+@import url(./pages/travel.module.css);
+@import url(./pages/parties.module.css);
+
+/* custom global properties */
+@import url(./var.css);

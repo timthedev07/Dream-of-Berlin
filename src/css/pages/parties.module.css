@@ -1,0 +1,38 @@
+.page-header#parties-page-header {
+  background-image: url(/images/parties.jpg);
+}
+
+/* .political-leaderboard,
+.political-leaderboard tbody tr td {
+  border: 1px solid white;
+} */
+
+.political-leaderboard {
+  margin: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .political-leaderboard {
+    margin: 1px;
+  }
+  td.political-leaderboard-cell.name-cell {
+    width: 10%;
+  }
+  td.political-leaderboard-cell.progress-cell {
+    width: 60%;
+  }
+
+  .political-progress-bar {
+    width: 100% !important;
+  }
+}
+
+td.political-leaderboard-cell {
+  text-align: right;
+  padding: 5px;
+}
+
+.political-progress-bar {
+  width: 30vw;
+  height: 20px;
+}

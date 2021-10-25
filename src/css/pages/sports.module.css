@@ -1,0 +1,92 @@
+.page-header#sports-page-header {
+  background-image: url(/images/sport2.jpg);
+}
+
+@media screen and (max-width: 800px) {
+  .page-header#sports-page-header {
+    background-image: url(/images/sportmobile.jpg);
+  }
+  .page-header#sports-page-header .page-heading {
+    top: 100px;
+    left: 2%;
+  }
+}
+
+.page-content {
+  padding: 0;
+}
+
+.margined-div {
+  margin-right: var(--horizontal-spacing);
+  margin-left: var(--horizontal-spacing);
+  margin-top: var(--horizontal-spacing);
+  margin-bottom: var(--horizontal-spacing);
+  --horizontal-spacing: 100px;
+  --vertical-spacing: 10px;
+}
+
+.parallelogram-text-container {
+  transform: skew(-5deg);
+}
+
+#sports-intro {
+  width: 300px;
+  height: 500px;
+  color: black;
+  padding: 20px;
+  margin-left: 30%;
+  background-color: rgb(247, 247, 247);
+}
+
+#sports-intro-img {
+  width: 100%;
+  z-index: -100;
+  height: auto;
+  filter: brightness(70%) blur(1.5px);
+  object-fit: cover;
+}
+
+@media screen and (max-width: 525px) {
+  .margined-div {
+    --horizontal-spacing: 30px;
+    --vertical-spacing: 10px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .margined-div {
+    --horizontal-spacing: 10px;
+    --vertical-spacing: 5px;
+  }
+}
+
+.sports-swiper-slide {
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+}
+.swiper-slide,
+.swiper-slide.swiper-slide-active {
+  width: fit-content !important;
+  height: 400px;
+}
+
+.swiper-image {
+  width: 85vw;
+  max-width: 1000px;
+  height: 500px;
+  object-position: 25% center;
+}
+
+.olympians-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1000px) {
+  .olympians-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
