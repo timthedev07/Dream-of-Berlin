@@ -1,5 +1,5 @@
 .page-header#travel-page-header {
-  background-image: url(../../images/berlin1.jpg);
+  background-image: url(/images/berlin1.jpg);
   background-position: center center;
 }
 
@@ -11,7 +11,7 @@
 @media screen and (max-width: 800px) {
   .page-header#travel-page-header {
     background-position: center center;
-    background-image: url(../../images/berlin2.jpg);
+    background-image: url(/images/berlin2.jpg);
   }
   .page-header#travel-page-header .page-heading {
     top: 180px;

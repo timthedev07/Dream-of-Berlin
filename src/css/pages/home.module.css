@@ -4,7 +4,7 @@
   height: 80vh;
   min-width: var(--min-width);
   min-height: 500px;
-  background-image: url(../../images/header.jpg);
+  background-image: url(/images/header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
