@@ -40,7 +40,7 @@ export const RestaurantMap = () => {
       data-aos="zoom-in-down"
       data-aos-duration={SCROLL_ANIMATION_DURATION}
       data-aos-once="true"
-      id="restaurant-map"
+      className="attractions-map-container"
     >
       {!DEV_MODE ? (
         <ReactGLMap
