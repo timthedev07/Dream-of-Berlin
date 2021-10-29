@@ -42,6 +42,10 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="twitter:image" content={metadata.image} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/logo192.png" />
+        <meta
+          name="google-site-verification"
+          content="xq42Z1CCBkK6X77Zf_fAKg44n6iXM3lCLMYT4B7Sdbw"
+        />
       </Head>
 
       <Component {...pageProps} />
